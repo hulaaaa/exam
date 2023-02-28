@@ -4,13 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Normalize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-UIkit->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.3/dist/css/uikit.min.css" />
+
+    <!-Bootstrap->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-Bootstrap Icon->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!--My styles-->
     <link rel="stylesheet" href="/css/index.css">
-    <title>Document</title>
+    <title>Tour Gidue</title>
 </head>
 <body>
-    <h1>hello world</h1>
-    <div class="go">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut autem deserunt error laborum numquam rem similique veniam. Amet assumenda atque culpa deleniti eos, illum incidunt iusto minima quidem velit!</p>
-    </div>
-</body>
+    <!--nav-->
+    <nav id="nav1" class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#startDiv">TOUR-GUIDE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#storyDiv">Stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Write to us</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Main content-->
+    <main id="startDiv" class="container-fluid">
+        <div class="aside">
+            <p id="h1">Let's go on a trip to Paris</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, culpa debitis eaque eligendi esse et fugiat in inventore ipsum iste modi mollitia numquam porro quidem repellat repellendus sequi sint ut?</p>
+            <button>
+                <span class="box">Start</span>
+            </button>
+        </div>
+        <div class="image">
+            <img src="https://wallpaperaccess.com/full/4445095.jpg" alt="">
+            <p id="effectP">Tour Eiffel - <br>
+                <span>tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower.</span>
+            </p>
+        </div>
+    </main>
+
+    <main id="storyDiv" class="container-fluid">
+        <div class="image">
+            <img src="https://images.unsplash.com/photo-1509439581779-6298f75bf6e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+            <p id="effectP">Arc de Triomphe - <br>
+                <span>monuments in Paris, France, standing at the western end of the Champs-Élysées at the centre of Place Charles de Gaulle</span>
+            </p>
+        </div>
+        <div class="aside">
+            <p id="h1">Story</p>
+            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, porro, sapiente? Aliquid distinctio ea est illo in laborum, minima nostrum odit praesentium unde? Accusamus iure officiis veritatis. Nisi placeat, voluptates.</span><span>Delectus deleniti eos, illo iste iusto modi neque nihil praesentium rerum tenetur. Aliquam aperiam atque autem cumque distinctio dolor dolore ducimus eaque eius, facere ipsa necessitatibus rerum, ullam veniam vitae.</span><span>Ad, autem beatae, consequatur cupiditate dignissimos dolores est facilis fuga fugit illum impedit incidunt inventore iste molestiae mollitia nemo neque nulla numquam quam quia quo quos similique sit tenetur vitae.</span></p>
+            <button>
+                <span class="box">MORE</span>
+            </button>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+    <!--SCRIPT-->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.3/dist/js/uikit-icons.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script></body>
 </html>
