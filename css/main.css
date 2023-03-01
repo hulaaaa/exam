@@ -1,4 +1,5 @@
 body {
+  overflow-x: clip;
   font-family: "EB Garamond", serif;
   background-color: #fff;
 }
@@ -17,6 +18,9 @@ body {
 #nav1 .container-fluid {
   padding: 15px 55px;
   background-color: #ffffff;
+}
+#nav1 .container-fluid button.navbar-toggler {
+  border: 0;
 }
 #nav1 .container-fluid a.navbar-brand {
   text-decoration: none;
@@ -221,7 +225,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100vw;
+  width: 99vw;
   height: 50vh;
   border-bottom: 1px solid #616161;
 }
@@ -229,22 +233,26 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 65%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  width: 50%;
   padding: 0px 70px;
 }
 #storyDiv .aside p#h1 {
   font-weight: 500;
   font-size: 3rem;
+}
+#storyDiv .aside #textStory {
+  height: 30%;
+  overflow: clip;
 }
 #storyDiv .aside .box {
   width: 140px;
@@ -325,7 +333,9 @@ body {
 }
 #storyDiv .image {
   position: relative;
-  width: 35%;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
   height: 100%;
 }
 #storyDiv .image img {
@@ -341,16 +351,13 @@ body {
   opacity: 0.4;
 }
 #storyDiv .image #effectP {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   position: absolute;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: 0.6s opacity, visibility;
   transition: 0.6s opacity, visibility;
   text-align: center;
+  margin: 7rem 3rem;
 }
 #storyDiv .image #effectP span {
   font-width: 400;
@@ -363,160 +370,568 @@ body {
   font-size: 3rem;
 }
 
-#storyDiv2 {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100vw;
-  height: 50vh;
-  border-bottom: 1px solid #616161;
+@media (min-width: 600px) and (max-width: 850px) {
+  #storyDiv {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 70vh;
+    border-bottom: 0.6px solid #a4a4a4;
+  }
+  #storyDiv .aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0px 30px;
+  }
+  #storyDiv .aside p#h1 {
+    font-weight: 500;
+    font-size: 3rem;
+  }
+  #storyDiv .aside #textStory {
+    height: 30%;
+    overflow: clip;
+  }
+  #storyDiv .aside .box {
+    width: 140px;
+    border-bottom: 0.6px solid #616161;
+    height: auto;
+    float: left;
+    -webkit-transition: 0.5s linear;
+    transition: 0.5s linear;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    margin: 0 5px;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  #storyDiv .aside .box:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  #storyDiv .aside .box:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  #storyDiv .aside .box:hover {
+    -webkit-box-shadow: 0 1px 15px #616161;
+            box-shadow: 0 1px 15px #616161;
+  }
+  #storyDiv .aside .box:hover:before {
+    border-color: #616161;
+    height: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: 0.3s height linear 0.3s, 0.3s -webkit-transform linear;
+    transition: 0.3s height linear 0.3s, 0.3s -webkit-transform linear;
+    transition: 0.3s transform linear, 0.3s height linear 0.3s;
+    transition: 0.3s transform linear, 0.3s height linear 0.3s, 0.3s -webkit-transform linear;
+  }
+  #storyDiv .aside .box:hover:after {
+    border-color: #616161;
+    height: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: 0.3s height linear 0.5s, 0.3s -webkit-transform linear;
+    transition: 0.3s height linear 0.5s, 0.3s -webkit-transform linear;
+    transition: 0.3s transform linear, 0.3s height linear 0.5s;
+    transition: 0.3s transform linear, 0.3s height linear 0.5s, 0.3s -webkit-transform linear;
+  }
+  #storyDiv .aside button {
+    color: #616161;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: transparent;
+  }
+  #storyDiv .image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    height: 100%;
+  }
+  #storyDiv .image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transition: 0.6s opacity;
+    transition: 0.6s opacity;
+  }
+  #storyDiv .image:hover img {
+    opacity: 0.4;
+  }
+  #storyDiv .image #effectP {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.6s opacity, visibility;
+    transition: 0.6s opacity, visibility;
+    text-align: center;
+    margin: 7rem 3rem;
+  }
+  #storyDiv .image #effectP span {
+    font-width: 400;
+    font-size: 1.2rem;
+  }
+  #storyDiv .image:hover #effectP {
+    visibility: visible;
+    opacity: 1;
+    font-weight: 500;
+    font-size: 3rem;
+  }
+  section#features .textFeatures {
+    padding: 25px 0px;
+  }
+  section#features .textFeatures p#h1 {
+    text-align: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-weight: 500;
+    font-size: 3rem;
+  }
+  section#features .gridFeatures .row .col-4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    gap: 20px;
+    padding: 50px 15px;
+    border: none;
+    border-bottom: 0.6px solid #a4a4a4;
+    border-right: 0.6px solid #a4a4a4;
+  }
+  section#features .gridFeatures .row .col-4 i {
+    font-size: 1.5rem;
+  }
+  section#features .gridFeatures .row .col-4 h6 {
+    font-family: "EB Garamond", serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+  section#features .gridFeatures .row .col-4 p {
+    text-align: center;
+  }
+  section#features .gridFeatures .row .col-4:nth-last-child(odd) {
+    border-right: none;
+  }
+  section#features .gridFeatures .row .col-4:nth-last-child(1) {
+    border-bottom: none;
+  }
+  section#features .gridFeatures .row .col-4:nth-last-child(2) {
+    border-bottom: none;
+  }
 }
-#storyDiv2 .aside {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
-  width: 65%;
-  height: 100%;
-  padding: 0px 70px;
+@media (min-width: 0px) and (max-width: 650px) {
+  #startDiv {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    width: 100vw;
+    height: 100vh;
+    border-bottom: 1px solid #616161;
+  }
+  #startDiv .aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0px 70px;
+  }
+  #startDiv .aside p#h1 {
+    font-weight: 500;
+    font-size: 3rem;
+  }
+  #startDiv .aside .box {
+    width: 140px;
+    border-bottom: 0.6px solid #616161;
+    height: auto;
+    float: left;
+    -webkit-transition: 0.5s linear;
+    transition: 0.5s linear;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    margin: 0 5px;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  #startDiv .aside .box:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  #startDiv .aside .box:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  #startDiv .aside .box:hover {
+    -webkit-box-shadow: 0 1px 15px #616161;
+            box-shadow: 0 1px 15px #616161;
+  }
+  #startDiv .aside .box:hover:before {
+    border-color: #616161;
+    height: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: 0.3s height linear 0.3s, 0.3s -webkit-transform linear;
+    transition: 0.3s height linear 0.3s, 0.3s -webkit-transform linear;
+    transition: 0.3s transform linear, 0.3s height linear 0.3s;
+    transition: 0.3s transform linear, 0.3s height linear 0.3s, 0.3s -webkit-transform linear;
+  }
+  #startDiv .aside .box:hover:after {
+    border-color: #616161;
+    height: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: 0.3s height linear 0.5s, 0.3s -webkit-transform linear;
+    transition: 0.3s height linear 0.5s, 0.3s -webkit-transform linear;
+    transition: 0.3s transform linear, 0.3s height linear 0.5s;
+    transition: 0.3s transform linear, 0.3s height linear 0.5s, 0.3s -webkit-transform linear;
+  }
+  #startDiv .aside button {
+    color: #616161;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: transparent;
+  }
+  #startDiv .image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  #startDiv .image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transition: 0.6s opacity;
+    transition: 0.6s opacity;
+  }
+  #startDiv .image:hover img {
+    opacity: 0.4;
+  }
+  #startDiv .image #effectP {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.6s opacity, visibility;
+    transition: 0.6s opacity, visibility;
+    text-align: center;
+    margin: 5rem 3rem;
+  }
+  #startDiv .image #effectP span {
+    font-width: 400;
+    font-size: 1rem;
+  }
+  #startDiv .image:hover #effectP {
+    visibility: visible;
+    opacity: 1;
+    font-weight: 500;
+    font-size: 2rem;
+  }
+  #storyDiv {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    border-bottom: 1px solid #616161;
+  }
+  #storyDiv .aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0px 30px;
+  }
+  #storyDiv .aside p#h1 {
+    font-weight: 500;
+    font-size: 3rem;
+  }
+  #storyDiv .aside #textStory {
+    height: 30%;
+    overflow: clip;
+  }
+  #storyDiv .aside .box {
+    width: 140px;
+    border-bottom: 0.6px solid #616161;
+    height: auto;
+    float: left;
+    -webkit-transition: 0.5s linear;
+    transition: 0.5s linear;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    margin: 0 5px;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  #storyDiv .aside .box:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  #storyDiv .aside .box:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  #storyDiv .aside .box:hover {
+    -webkit-box-shadow: 0 1px 15px #616161;
+            box-shadow: 0 1px 15px #616161;
+  }
+  #storyDiv .aside .box:hover:before {
+    border-color: #616161;
+    height: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: 0.3s height linear 0.3s, 0.3s -webkit-transform linear;
+    transition: 0.3s height linear 0.3s, 0.3s -webkit-transform linear;
+    transition: 0.3s transform linear, 0.3s height linear 0.3s;
+    transition: 0.3s transform linear, 0.3s height linear 0.3s, 0.3s -webkit-transform linear;
+  }
+  #storyDiv .aside .box:hover:after {
+    border-color: #616161;
+    height: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: 0.3s height linear 0.5s, 0.3s -webkit-transform linear;
+    transition: 0.3s height linear 0.5s, 0.3s -webkit-transform linear;
+    transition: 0.3s transform linear, 0.3s height linear 0.5s;
+    transition: 0.3s transform linear, 0.3s height linear 0.5s, 0.3s -webkit-transform linear;
+  }
+  #storyDiv .aside button {
+    color: #616161;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: transparent;
+  }
+  #storyDiv .image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    height: 100%;
+  }
+  #storyDiv .image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transition: 0.6s opacity;
+    transition: 0.6s opacity;
+  }
+  #storyDiv .image:hover img {
+    opacity: 0.4;
+  }
+  #storyDiv .image #effectP {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.6s opacity, visibility;
+    transition: 0.6s opacity, visibility;
+    text-align: center;
+    margin: 7rem 3rem;
+  }
+  #storyDiv .image #effectP span {
+    font-width: 400;
+    font-size: 1.2rem;
+  }
+  #storyDiv .image:hover #effectP {
+    visibility: visible;
+    opacity: 1;
+    font-weight: 500;
+    font-size: 3rem;
+  }
+  section#features .textFeatures {
+    padding: 25px 0px;
+  }
+  section#features .textFeatures p#h1 {
+    text-align: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-weight: 500;
+    font-size: 3rem;
+  }
+  section#features .gridFeatures .row .col-4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    gap: 20px;
+    padding: 50px 15px;
+    border: none;
+    border-bottom: 0.6px solid #a4a4a4;
+  }
+  section#features .gridFeatures .row .col-4 i {
+    font-size: 1.5rem;
+  }
+  section#features .gridFeatures .row .col-4 h6 {
+    font-family: "EB Garamond", serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+  section#features .gridFeatures .row .col-4 p {
+    text-align: center;
+  }
+  section#features .gridFeatures .row .col-4:nth-last-child(1) {
+    border: none;
+  }
+  .story2 {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
+  }
 }
-#storyDiv2 .aside p#h1 {
-  font-weight: 500;
-  font-size: 3rem;
-}
-#storyDiv2 .aside .box {
-  width: 140px;
-  border-bottom: 0.6px solid #616161;
-  height: auto;
-  float: left;
-  -webkit-transition: 0.5s linear;
-  transition: 0.5s linear;
-  position: relative;
-  display: block;
-  overflow: hidden;
-  padding: 15px;
-  text-align: center;
-  margin: 0 5px;
-  background: transparent;
-  text-transform: uppercase;
-  font-weight: 900;
-}
-#storyDiv2 .aside .box:before {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  height: 1px;
-  width: 100%;
-  border-bottom: 1px solid transparent;
-  border-left: 1px solid transparent;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-}
-#storyDiv2 .aside .box:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  border-top: 1px solid transparent;
-  border-right: 1px solid transparent;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-#storyDiv2 .aside .box:hover {
-  -webkit-box-shadow: 0 1px 15px #616161;
-          box-shadow: 0 1px 15px #616161;
-}
-#storyDiv2 .aside .box:hover:before {
-  border-color: #616161;
-  height: 100%;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: 0.3s height linear 0.3s, 0.3s -webkit-transform linear;
-  transition: 0.3s height linear 0.3s, 0.3s -webkit-transform linear;
-  transition: 0.3s transform linear, 0.3s height linear 0.3s;
-  transition: 0.3s transform linear, 0.3s height linear 0.3s, 0.3s -webkit-transform linear;
-}
-#storyDiv2 .aside .box:hover:after {
-  border-color: #616161;
-  height: 100%;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: 0.3s height linear 0.5s, 0.3s -webkit-transform linear;
-  transition: 0.3s height linear 0.5s, 0.3s -webkit-transform linear;
-  transition: 0.3s transform linear, 0.3s height linear 0.5s;
-  transition: 0.3s transform linear, 0.3s height linear 0.5s, 0.3s -webkit-transform linear;
-}
-#storyDiv2 .aside button {
-  color: #616161;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  background: transparent;
-}
-#storyDiv2 .image {
-  position: relative;
-  width: 35%;
-  height: 100%;
-}
-#storyDiv2 .image img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-transition: 0.6s opacity;
-  transition: 0.6s opacity;
-}
-#storyDiv2 .image:hover img {
-  opacity: 0.4;
-}
-#storyDiv2 .image #effectP {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: 0.6s opacity, visibility;
-  transition: 0.6s opacity, visibility;
-  text-align: center;
-}
-#storyDiv2 .image #effectP span {
-  font-width: 400;
-  font-size: 1.2rem;
-}
-#storyDiv2 .image:hover #effectP {
-  visibility: visible;
-  opacity: 1;
-  font-weight: 500;
-  font-size: 3rem;
-}
-
 #gallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -537,13 +952,13 @@ body {
   font-weight: 500;
   font-size: 3rem;
 }
-#gallery .gallery li {
+#gallery .gallery li.uk-transition-toggle {
   height: 400px;
 }
-#gallery .gallery li:hover img {
+#gallery .gallery li.uk-transition-toggle:hover img {
   opacity: 0.3;
 }
-#gallery .gallery li:hover h1 {
+#gallery .gallery li.uk-transition-toggle:hover h1 {
   color: black;
 }
 #gallery .gallery img {
@@ -551,4 +966,58 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+section#features .textFeatures {
+  padding: 25px 0px;
+}
+section#features .textFeatures p#h1 {
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-weight: 500;
+  font-size: 3rem;
+}
+section#features .gridFeatures .row .col-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  padding: 50px 15px;
+}
+section#features .gridFeatures .row .col-4 i {
+  font-size: 1.5rem;
+}
+section#features .gridFeatures .row .col-4 h6 {
+  font-family: "EB Garamond", serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+section#features .gridFeatures .row .col-4 p {
+  text-align: center;
+}
+section#features .gridFeatures .row .col-4:nth-child(1) {
+  border-right: 0.6px solid #616161;
+  border-bottom: 0.6px solid #616161;
+}
+section#features .gridFeatures .row .col-4:nth-child(2) {
+  border-right: 0.6px solid #616161;
+  border-bottom: 0.6px solid #616161;
+}
+section#features .gridFeatures .row .col-4:nth-child(3) {
+  border-bottom: 0.6px solid #616161;
+}
+section#features .gridFeatures .row .col-4:nth-child(4) {
+  border-right: 0.6px solid #616161;
+}
+section#features .gridFeatures .row .col-4:nth-child(5) {
+  border-right: 0.6px solid #616161;
 }
