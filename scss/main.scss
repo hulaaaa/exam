@@ -306,6 +306,25 @@ body{
     }
   }
 }
+@media (min-width: 850px){
+  .col-4:nth-child(1){
+    border-right: 0.6px solid #616161;
+    border-bottom: 0.6px solid #616161;
+  }
+  .col-4:nth-child(2){
+    border-right: 0.6px solid #616161;
+    border-bottom: 0.6px solid #616161;
+  }
+  .col-4:nth-child(3){
+    border-bottom: 0.6px solid #616161;
+  }
+  .col-4:nth-child(4){
+    border-right: 0.6px solid #616161;
+  }
+  .col-4:nth-child(5){
+    border-right: 0.6px solid #616161;
+  }
+}
 @media (min-width: 600px) and (max-width: 850px){
   #storyDiv{
     position: relative;
@@ -761,6 +780,42 @@ body{
   .story2{
     flex-direction: column-reverse !important;
   }
+  form{
+    margin-top: 20px;
+    .textForm{
+      padding: 25px 0px;
+      p#h1 {
+        text-align: center;
+        height: fit-content;
+        font-weight: 500;
+        font-size: 3rem;
+      }
+    }
+    .basicInform{
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      div{
+        width: 100%;
+      }
+    }
+    .contactWrite{
+      margin-bottom: 20px;
+      .form-check{
+        margin: 0;
+        padding: 0;
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+    .selectionWrite{
+      margin-bottom: 20px;
+    }
+    #labelWtire{
+      font-weight: 600;
+    }
+  }
 }
 
 
@@ -828,24 +883,46 @@ section#features{
           text-align: center;
         }
       }
-      .col-4:nth-child(1){
-        border-right: 0.6px solid #616161;
-        border-bottom: 0.6px solid #616161;
-      }
-      .col-4:nth-child(2){
-        border-right: 0.6px solid #616161;
-        border-bottom: 0.6px solid #616161;
-      }
-      .col-4:nth-child(3){
-        border-bottom: 0.6px solid #616161;
-      }
-      .col-4:nth-child(4){
-        border-right: 0.6px solid #616161;
-      }
-      .col-4:nth-child(5){
-        border-right: 0.6px solid #616161;
-      }
+
     }
 
+  }
+}
+
+form{
+  margin-top: 20px;
+  .textForm{
+    padding: 25px 0px;
+    p#h1 {
+      text-align: center;
+      height: fit-content;
+      font-weight: 500;
+      font-size: 3rem;
+    }
+  }
+  .basicInform{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    div{
+      width: 33%;
+
+    }
+  }
+  .contactWrite{
+    margin-bottom: 20px;
+    .form-check{
+      margin: 0;
+      padding: 0;
+    }
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+  }
+  .selectionWrite{
+    margin-bottom: 20px;
+  }
+  #labelWtire{
+    font-weight: 600;
   }
 }

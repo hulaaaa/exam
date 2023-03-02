@@ -370,6 +370,25 @@ body {
   font-size: 3rem;
 }
 
+@media (min-width: 850px) {
+  .col-4:nth-child(1) {
+    border-right: 0.6px solid #616161;
+    border-bottom: 0.6px solid #616161;
+  }
+  .col-4:nth-child(2) {
+    border-right: 0.6px solid #616161;
+    border-bottom: 0.6px solid #616161;
+  }
+  .col-4:nth-child(3) {
+    border-bottom: 0.6px solid #616161;
+  }
+  .col-4:nth-child(4) {
+    border-right: 0.6px solid #616161;
+  }
+  .col-4:nth-child(5) {
+    border-right: 0.6px solid #616161;
+  }
+}
 @media (min-width: 600px) and (max-width: 850px) {
   #storyDiv {
     position: relative;
@@ -931,6 +950,54 @@ body {
         -ms-flex-direction: column-reverse !important;
             flex-direction: column-reverse !important;
   }
+  form {
+    margin-top: 20px;
+  }
+  form .textForm {
+    padding: 25px 0px;
+  }
+  form .textForm p#h1 {
+    text-align: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-weight: 500;
+    font-size: 3rem;
+  }
+  form .basicInform {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 25px;
+  }
+  form .basicInform div {
+    width: 100%;
+  }
+  form .contactWrite {
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 35px;
+  }
+  form .contactWrite .form-check {
+    margin: 0;
+    padding: 0;
+  }
+  form .selectionWrite {
+    margin-bottom: 20px;
+  }
+  form #labelWtire {
+    font-weight: 600;
+  }
 }
 #gallery {
   display: -webkit-box;
@@ -1004,20 +1071,52 @@ section#features .gridFeatures .row .col-4 h6 {
 section#features .gridFeatures .row .col-4 p {
   text-align: center;
 }
-section#features .gridFeatures .row .col-4:nth-child(1) {
-  border-right: 0.6px solid #616161;
-  border-bottom: 0.6px solid #616161;
+
+form {
+  margin-top: 20px;
 }
-section#features .gridFeatures .row .col-4:nth-child(2) {
-  border-right: 0.6px solid #616161;
-  border-bottom: 0.6px solid #616161;
+form .textForm {
+  padding: 25px 0px;
 }
-section#features .gridFeatures .row .col-4:nth-child(3) {
-  border-bottom: 0.6px solid #616161;
+form .textForm p#h1 {
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-weight: 500;
+  font-size: 3rem;
 }
-section#features .gridFeatures .row .col-4:nth-child(4) {
-  border-right: 0.6px solid #616161;
+form .basicInform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 25px;
 }
-section#features .gridFeatures .row .col-4:nth-child(5) {
-  border-right: 0.6px solid #616161;
+form .basicInform div {
+  width: 33%;
+}
+form .contactWrite {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 35px;
+}
+form .contactWrite .form-check {
+  margin: 0;
+  padding: 0;
+}
+form .selectionWrite {
+  margin-bottom: 20px;
+}
+form #labelWtire {
+  font-weight: 600;
 }
