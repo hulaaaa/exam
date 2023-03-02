@@ -516,6 +516,10 @@ body{
         font-weight: 500;
         font-size: 3rem;
       }
+      p{
+        height: 30%;
+        overflow: clip;
+      }
       .box {
         width: 140px;
         border-bottom: 0.6px solid #616161;
@@ -582,7 +586,7 @@ body{
     }
     .image{
       position: relative;
-      width: 100%;
+      width: 100vw;
       height: 100vh;
       img{
         position: absolute;
