@@ -964,7 +964,7 @@ body {
     font-weight: 500;
     font-size: 3rem;
   }
-  form .basicInform {
+  form #basInfoBlock {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -974,8 +974,8 @@ body {
             flex-direction: column;
     gap: 25px;
   }
-  form .basicInform div {
-    width: 100%;
+  form #basInfoBlock #basInfoAdapt {
+    width: 100% !important;
   }
   form .contactWrite {
     margin-bottom: 20px;
@@ -1035,6 +1035,9 @@ body {
      object-fit: cover;
 }
 
+section#features {
+  margin-top: 50px;
+}
 section#features .textFeatures {
   padding: 25px 0px;
 }
@@ -1073,7 +1076,8 @@ section#features .gridFeatures .row .col-4 p {
 }
 
 form {
-  margin-top: 20px;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 form .textForm {
   padding: 25px 0px;
@@ -1114,9 +1118,70 @@ form .contactWrite .form-check {
   margin: 0;
   padding: 0;
 }
+form .contactWrite .form-check .form-check-input:checked {
+  background-color: #616161;
+  border-color: #616161;
+}
 form .selectionWrite {
   margin-bottom: 20px;
 }
 form #labelWtire {
   font-weight: 600;
+}
+
+footer#footerBlock {
+  border-top: 0.6px solid #a4a4a4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 0;
+  gap: 20px;
+}
+footer#footerBlock .footerSocial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 20px;
+}
+footer#footerBlock .footerSocial .ico {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  border: 0.6px solid black;
+}
+footer#footerBlock .footerSocial .ico i {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0;
+  margin: 0;
+  font-size: 21px;
+}
+footer#footerBlock .footerText p {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
 }
